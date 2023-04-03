@@ -41,7 +41,7 @@ app.post('/files', async (req, res) => {
       const buffer = Buffer.concat(chunks)
   
       // Set the response headers to send the file as a download attachment
-      const filename = `${hash}.txt` // Change the file extension to match the actual file type
+      const filename = `${hash}.pdf` // Change the file extension to match the actual file type
       res.setHeader('Content-Disposition', `attachment; filename=${filename}`)
   
       // Write the buffer data to the response
